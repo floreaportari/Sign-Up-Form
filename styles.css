@@ -1,0 +1,114 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --main-text-color: rgb(14, 11, 11);
+  --main-font-weight: 600;
+  --headings-font-size: clamp(1.2rem, 1.1vw, 1.4rem);
+}
+
+.main-container {
+  display: flex;
+  color: var(--main-text-color);
+  min-height: 100vh;
+}
+
+.image-container {
+  display: none;
+  background-image: url("images/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  width: max(100px, 45vw);
+  position: relative;
+}
+
+.image-container > p {
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+}
+
+.content {
+  text-align: left;
+  padding: 5rem 2.3rem;
+  background-color: rgb(243, 237, 237);
+}
+
+.upper-row {
+  width: max(400px, 100%);
+  padding-bottom: 4rem;
+}
+
+.upper-row > h3 {
+  font-size: var(--headings-font-size);
+  font-weight: var(--main-font-weight);
+  line-height: 1.2;
+  width: max(400px, 70%);
+}
+
+.form-content > h2 {
+  font-size: var(--headings-font-size);
+  font-weight: var(--main-font-weight);
+  margin-bottom: 40px;
+}
+
+.form-row {
+  margin: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-row > label {
+  text-transform: uppercase;
+  font-weight: var(--main-font-weight);
+  font-size: 14px;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  font-family: inherit;
+  font-size: 14px;
+  width: max(350px, 35%);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgb(231, 226, 226);
+}
+
+.lower-form-container {
+  margin: 1.8rem 0;
+}
+
+.lower-form-container button {
+  font-family: inherit;
+  padding: 1.1rem 2.8rem;
+  border-radius: 10px;
+  border: 2px solid var(--main-text-color);
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all ease-in 0.09s;
+}
+
+.lower-form-container button:hover {
+  background-color: var(--main-text-color);
+  color: #fff;
+}
+
+@media (min-width: 760px) {
+  .image-container {
+    display: block;
+  }
+}
