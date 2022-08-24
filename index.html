@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JS Scripts -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="image">
+        <p>Photo by Hannes Egler on Unsplash</p>
+      </div>
+      <div class="content">
+        <div class="upper-row">
+          <h3>
+            This is an imaginary gym. You know you need something like this in
+            your life to help you achieve your deepest goals. Sign up to get
+            started!
+          </h3>
+        </div>
+        <div class="form-content">
+          <h2>Let's do this!</h2>
+          <form action="#" method="POST">
+            <div class="form-row">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="first-name" required />
+            </div>
+            <div class="form-row">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="last-name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-row">
+              <label for="phoneNumber">Phone number</label>
+              <input type="tel" id="phoneNumber" name="phone-number" required />
+            </div>
+            <div class="form-row">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-row">
+              <label for="matchPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="matchPassword"
+                name="password"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <button type="submit">Create Account</button>
+            </div>
+            <p>Already have an account? <a href="">Log in</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
