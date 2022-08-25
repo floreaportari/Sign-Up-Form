@@ -44,7 +44,7 @@ body {
 
 .upper-row {
   width: max(400px, 100%);
-  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .upper-row > h3 {
@@ -65,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  position: relative;
 }
 
 .form-row > label {
@@ -81,14 +81,28 @@ input[type="password"],
 input[type="tel"] {
   font-family: inherit;
   font-size: 14px;
-  width: max(350px, 35%);
+  width: min(300px, 70%);
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px solid rgb(231, 226, 226);
 }
 
+input:focus {
+  outline: none;
+}
+
+.form-row.invalid input {
+  border: 2px solid red;
+}
+
+.error-text {
+  font-size: 10px;
+  color: red;
+  height: 12px;
+}
+
 .lower-form-container {
-  margin: 1.8rem 0;
+  margin: 4rem 0 0.5rem 0;
 }
 
 .lower-form-container button {
@@ -107,8 +121,42 @@ input[type="tel"] {
   color: #fff;
 }
 
-@media (min-width: 760px) {
+.lower-form-container a {
+  text-decoration: none;
+}
+
+/* input:invalid {
+  border-color: red;
+} */
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  position: absolute;
+  bottom: -6.2rem;
+  padding: 0;
+  font-size: 10px;
+  color: red;
+  border-radius: 0 0 5px 5px;
+}
+
+.error.active {
+  padding: 0.3rem;
+}
+
+@media (min-width: 700px) {
   .image-container {
     display: block;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-row {
+    flex-basis: 50%;
   }
 }
